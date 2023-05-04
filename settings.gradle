@@ -1,0 +1,3 @@
+rootProject.name = 'BungeePAPI'
+
+include 'bungeepapi-common', 'bungeepapi-spigot', 'bungeepapi-bungeecord'

@@ -1,0 +1,7 @@
+name: BungeePAPI
+version: 1.0.0
+main: io.github.tanguygab.bungeepapi.spigot.BungeePAPISpigot
+api-version: 1.13
+depend: [ PlaceholderAPI ]
+authors: [ Tanguygab ]
+description: Bridge to forward PlaceholderAPI placeholders across a BungeeCord network
