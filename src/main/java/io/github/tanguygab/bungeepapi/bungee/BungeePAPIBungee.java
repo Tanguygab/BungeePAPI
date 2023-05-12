@@ -15,4 +15,8 @@ public class BungeePAPIBungee extends Plugin implements Listener {
         BungeePAPI.setInstance(new BungeePAPI(new BungeePlatform(this),getDataFolder()));
     }
 
+    @Override
+    public void onDisable() {
+        BungeePAPI.getInstance().unload();
+    }
 }

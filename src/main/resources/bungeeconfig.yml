@@ -1,0 +1,15 @@
+color-placeholders: false
+
+
+refresh-intervals:
+  default: 1000
+  "%vault_rank%": 500
+
+replacements:
+  "%vault_rank%":
+    - "admin": "&cAdmin" # %replacements_vault_rank_1%
+      else: "&7%value%"
+    - "admin": "&c" # %replacements_vault_rank_2%
+      "else": "&7"
+
+expansions-config: {}

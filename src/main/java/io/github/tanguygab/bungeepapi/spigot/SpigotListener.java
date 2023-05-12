@@ -12,6 +12,6 @@ public class SpigotListener implements Listener, PluginMessageListener {
     @Override
     public void onPluginMessageReceived(@NonNull String channel, @NonNull Player player, byte@NonNull[] message) {
         if (channel.equalsIgnoreCase(PluginMessageHandler.PLUGIN_CHANNEL))
-            BungeePAPI.getInstance().getPluginMessageHandler().onMessageReceive(message);
+            ((SpigotPluginMessageHandler)BungeePAPI.getInstance().getPluginMessageHandler()).onMessageReceive(message);
     }
 }

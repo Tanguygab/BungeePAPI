@@ -3,6 +3,7 @@ package io.github.tanguygab.bungeepapi.common;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -19,7 +20,10 @@ public class PAPIServer {
     public void addWorld(PAPIWorld world) {
         worlds.put(world.getName(),world);
     }
-    public List<PAPIPlayer<?>> getPlayers() {
+    public PAPIWorld getWorld(String name) {
+        return worlds.get(name);
+    }
+    public List<PAPIPlayer> getPlayers() {
         return worlds.values().stream().map(PAPIWorld::getPlayers).flatMap(Collection::stream).toList();
     }
 

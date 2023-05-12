@@ -4,6 +4,8 @@ import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 
+import java.util.UUID;
+
 @SuppressWarnings("UnstableApiUsage")
 public abstract class PluginMessageHandler {
 
@@ -11,13 +13,16 @@ public abstract class PluginMessageHandler {
     protected final BungeePAPI plugin = BungeePAPI.getInstance();
 
     public abstract void unload();
-    public abstract void onMessageReceive(byte[] data);
-    public abstract void sendMessage();
 
-    protected ByteArrayDataInput readMsg(byte[] data) {
+    protected ByteArrayDataInput readMessage(byte[] data) {
         return ByteStreams.newDataInput(data);
     }
-    protected ByteArrayDataOutput createMsg() {
-        return ByteStreams.newDataOutput();
+    protected byte[] createMessage(String... args) {
+        ByteArrayDataOutput out = ByteStreams.newDataOutput();
+        for (String arg : args) out.writeUTF(arg);
+        return out.toByteArray();
+    }
+    protected PAPIPlayer getPlayer(String uuid) {
+        return plugin.getPlayer(UUID.fromString(uuid));
     }
 }

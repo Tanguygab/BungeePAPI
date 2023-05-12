@@ -11,6 +11,7 @@ public class SpigotPluginMessageHandler extends PluginMessageHandler {
         this.plugin = plugin;
         plugin.getServer().getMessenger().registerIncomingPluginChannel(plugin,PLUGIN_CHANNEL,((SpigotPlatform)super.plugin.getPlatform()).listener);
         plugin.getServer().getMessenger().registerOutgoingPluginChannel(plugin,PLUGIN_CHANNEL);
+        sendMessage("Load");
     }
 
     @Override
@@ -19,17 +20,17 @@ public class SpigotPluginMessageHandler extends PluginMessageHandler {
         plugin.getServer().getMessenger().unregisterOutgoingPluginChannel(plugin,PLUGIN_CHANNEL);
     }
 
-    @Override
     public void onMessageReceive(byte[] data) {
-        ByteArrayDataInput in = readMsg(data);
+        ByteArrayDataInput in = readMessage(data);
         String subChannel = in.readUTF();
         switch (subChannel) {
-            case "Load" -> {}
+            case "Load" -> {
+
+            }
         }
     }
 
-    @Override
-    public void sendMessage() {
-
+    public void sendMessage(String... args) {
+        plugin.getServer().sendPluginMessage(plugin,PluginMessageHandler.PLUGIN_CHANNEL,createMessage(args));
     }
 }

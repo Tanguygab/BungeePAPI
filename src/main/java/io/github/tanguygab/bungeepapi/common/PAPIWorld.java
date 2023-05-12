@@ -10,9 +10,9 @@ import java.util.List;
 public class PAPIWorld {
 
     @Getter private final String name;
-    @Getter private final List<PAPIPlayer<?>> players = new ArrayList<>();
+    @Getter private final List<PAPIPlayer> players = new ArrayList<>();
 
-    public PAPIWorld(String name, List<PAPIPlayer<?>> players) {
+    public PAPIWorld(String name, List<PAPIPlayer> players) {
         this.name = name;
         this.players.addAll(players);
     }
