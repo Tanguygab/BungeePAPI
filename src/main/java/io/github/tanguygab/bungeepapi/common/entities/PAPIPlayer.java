@@ -1,4 +1,4 @@
-package io.github.tanguygab.bungeepapi.common;
+package io.github.tanguygab.bungeepapi.common.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

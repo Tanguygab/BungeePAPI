@@ -1,11 +1,9 @@
 package io.github.tanguygab.bungeepapi.bungee;
 
 import io.github.tanguygab.bungeepapi.common.BungeePAPI;
-import io.github.tanguygab.bungeepapi.common.PAPIPlayer;
-import io.github.tanguygab.bungeepapi.common.PAPIWorld;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIPlayer;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIWorld;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
-
-import java.util.UUID;
 
 public class BungeePAPIPlayer extends PAPIPlayer {
 

@@ -1,9 +1,8 @@
-package io.github.tanguygab.bungeepapi.common;
+package io.github.tanguygab.bungeepapi.common.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.experimental.Accessors;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -14,7 +13,7 @@ import java.util.Map;
 public class PAPIServer {
 
     @Getter private final String name;
-    @Getter @Setter private boolean status;
+    @Getter @Setter private boolean online;
     @Getter private final Map<String,PAPIWorld> worlds = new HashMap<>();
 
     public void addWorld(PAPIWorld world) {

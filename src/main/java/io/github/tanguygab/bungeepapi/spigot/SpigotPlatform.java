@@ -1,7 +1,7 @@
 package io.github.tanguygab.bungeepapi.spigot;
 
-import io.github.tanguygab.bungeepapi.common.PAPIServer;
-import io.github.tanguygab.bungeepapi.common.PAPIWorld;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIServer;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIWorld;
 import io.github.tanguygab.bungeepapi.common.Platform;
 import io.github.tanguygab.bungeepapi.common.PluginMessageHandler;
 import lombok.Getter;

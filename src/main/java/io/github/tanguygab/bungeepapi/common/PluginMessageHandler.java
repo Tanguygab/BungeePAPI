@@ -3,6 +3,7 @@ package io.github.tanguygab.bungeepapi.common;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIPlayer;
 
 import java.util.UUID;
 

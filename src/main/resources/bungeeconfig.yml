@@ -1,15 +1,15 @@
 color-placeholders: false
 
-
 refresh-intervals:
   default: 1000
-  "%vault_rank%": 500
+  "%vault_rank%": 1000
 
-replacements:
-  "%vault_rank%":
-    - "admin": "&cAdmin" # %replacements_vault_rank_1%
-      else: "&7%value%"
-    - "admin": "&c" # %replacements_vault_rank_2%
-      "else": "&7"
-
-expansions-config: {}
+expansions-config:
+  replace: # %replacements_<placeholder type>_<replacement name>_<placeholder>%
+    "%vault_rank%":
+      "color": # %replacements_player_color_vault_rank%
+        "admin": "&cAdmin"
+        "else": "&7%value%"
+      "chatcolor": # %replacements_player_chatcolor_vault_rank%
+        "admin": "&c"
+        "else": "&7"

@@ -1,8 +1,8 @@
 package io.github.tanguygab.bungeepapi.spigot;
 
 import io.github.tanguygab.bungeepapi.common.BungeePAPI;
-import io.github.tanguygab.bungeepapi.common.PAPIPlayer;
-import io.github.tanguygab.bungeepapi.common.PAPIServer;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIPlayer;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIServer;
 import org.bukkit.entity.Player;
 
 public class SpigotPAPIPlayer extends PAPIPlayer {

@@ -1,7 +1,7 @@
 package io.github.tanguygab.bungeepapi.bungee;
 
 import io.github.tanguygab.bungeepapi.common.BungeePAPI;
-import io.github.tanguygab.bungeepapi.common.PAPIServer;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIServer;
 import io.github.tanguygab.bungeepapi.common.Platform;
 import io.github.tanguygab.bungeepapi.common.PluginMessageHandler;
 import net.md_5.bungee.api.plugin.Listener;
@@ -24,7 +24,7 @@ public class BungeePlatform extends Platform {
 
         plugin.getProxy().getPluginManager().registerListener(plugin,listener = new BungeeListener());
         plugin.getProxy().getScheduler().schedule(plugin,()->
-                        plugin.getProxy().getServers().forEach((server, info)->info.ping((result, error) -> instance.getServer(server).setStatus(error == null))),
+                        plugin.getProxy().getServers().forEach((server, info)->info.ping((result, error) -> instance.getServer(server).setOnline(error == null))),
                 0,10, TimeUnit.SECONDS);
     }
 

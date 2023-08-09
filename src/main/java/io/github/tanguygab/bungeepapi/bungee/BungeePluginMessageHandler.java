@@ -1,9 +1,9 @@
 package io.github.tanguygab.bungeepapi.bungee;
 
 import com.google.common.io.ByteArrayDataInput;
-import io.github.tanguygab.bungeepapi.common.PAPIPlayer;
-import io.github.tanguygab.bungeepapi.common.PAPIServer;
-import io.github.tanguygab.bungeepapi.common.PAPIWorld;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIPlayer;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIServer;
+import io.github.tanguygab.bungeepapi.common.entities.PAPIWorld;
 import io.github.tanguygab.bungeepapi.common.PluginMessageHandler;
 import net.md_5.bungee.api.config.ServerInfo;
 
